@@ -10,11 +10,14 @@ lives in `references/how-to.md`.
 One thing that you must need to get started is a project. And depending on the
 module use want to make use.
 
-## What do I need to Work Order
+## What do I need to start using Work Order
 
 First you need to make sure that you have project already defined. Second
 is Work Type is already available and lastly is the Service associated with
-the Work Types.
+the Work Types. Once the setup is done, you can start creating work orders
+using plain language. Tell when the work order begins and the due date,
+which project this should be done, what kind of work should be done (work type) and
+what are the services to be render with detailed description of you request.
 
 ## What do I need to create Services and Work Type
 
