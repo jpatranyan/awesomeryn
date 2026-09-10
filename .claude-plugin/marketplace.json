@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "awesomeryn",
+  "description": "Ranyan's skill marketplace for Claude Code.",
+  "owner": {
+    "name": "John Paul Delmundo",
+    "email": "jp.delmundo@ranyan.com",
+    "url": "https://github.com/jpatranyan"
+  },
+  "plugins": [
+    {
+      "name": "awesomeryn",
+      "description": "Knowledge base and onboarding help for the Ranyan web app. Ask /ryn how to do anything.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
