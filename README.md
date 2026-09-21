@@ -22,6 +22,9 @@ skills/ryn/
   references/          # the knowledge base — one file per topic, loaded on demand
   assets/              # onboarding checklist handed to new users
   scripts/validate.py  # pre-publish check
+skills/ranyan-budget-stats/
+  SKILL.md             # job-site stats reports (budget + work orders + inspections)
+                       # via the Ranyan MCP server — needs the server connected
 ```
 
 ## Adding knowledge
