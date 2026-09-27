@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "awesomeryn",
-      "description": "Knowledge base and onboarding help for the Ranyan web app. Ask /ryn how to do anything, or request job-site stats, project health, work-order, time-log and attestation reports via the Ranyan MCP server.",
+      "description": "Knowledge base and onboarding help for the Ranyan web app. Ask /ryn how to do anything, or request job-site stats, project health, work-order, inspection, time-log and attestation reports via the Ranyan MCP server.",
       "source": "./",
       "category": "productivity"
     }

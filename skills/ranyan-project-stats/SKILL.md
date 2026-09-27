@@ -114,8 +114,14 @@ tools are missing, say so and stop — never invent numbers.
 
 - `completed` count plus `byCategory`; items inspected/passed/failed and
   `failureRate`; remediation completed/outstanding/rate; assignment status
-  (unassigned failures mean nobody owns the fix list); `repeatFailures`
-  (consecutive count = chronic).
+  (unassigned failures mean nobody owns the fix list — flag it
+  prominently); `repeatFailures` (consecutive count = chronic).
+- `items.notInspected` = rows skipped because they don't apply (types are
+  templates) — never report as "missed". Scoring is a two-level average:
+  items within each area, then averaged across areas. Failed items
+  auto-generate remediation work orders carrying the item's photos/notes
+  and inheriting the assigned employee when the item had one. Full model
+  in the `ranyan-inspections` skill.
 - When remediation `rate` is 0 or null, check `noRemediationReason`
   **before** drawing a conclusion:
   - `not-configured` → the tenant never set up an inspection work type, so
