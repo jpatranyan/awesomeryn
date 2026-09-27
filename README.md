@@ -22,6 +22,10 @@ skills/ryn/
   references/          # the knowledge base — one file per topic, loaded on demand
   assets/              # onboarding checklist handed to new users
   scripts/validate.py  # pre-publish check
+skills/ranyan-work-orders/
+  SKILL.md             # the work-order operation engine — setup chain,
+                       # worker vs employee, status flow, Tag Job billing
+                       # via the Ranyan MCP server — needs the server connected
 skills/ranyan/
   SKILL.md             # time logs & attestations via the Ranyan MCP server —
                        # hours, punch data, shift affirmations; needs the server connected

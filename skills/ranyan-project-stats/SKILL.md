@@ -65,7 +65,14 @@ tools are missing, say so and stop — never invent numbers.
   Janitor, …) and rolled up. Report from `totals.estimate` plus per
   `budgetTypes[]`: revenue, `totalCOGS`, `grossMargin` (value, % and
   score), worker slots (position, hrs/wk, hourly wage, monthly cost), PTI,
-  supplies, uniforms, `laborRatio`.
+  supplies, uniforms, `laborRatio`. Exact estimate keys:
+  `estimatedPTI`/`estimatedPTIPercentage`, `projectedSupplyCost(+
+  Percentage)`, `paperSupplies`, `totalUniformCost`,
+  `averageHealthAndWelfare`, `benefits`, `overhead`, `pricePerSquareFoot`,
+  `occupiedSquareFootage`, `cleanerProductionRate`, `laborRatio`,
+  `workers[]` (hours, hourlyWage, monthlyHours, monthlyCost). The app's
+  project-level "code" and "service code" fields are not exposed via MCP —
+  only the budget-level PTI percentages exist server-side.
 - **ACTUAL is LABOUR-ONLY.** Non-labour COGS is carried unchanged from the
   estimate and flagged `nonLabourBasis: "estimate"` — always report it as a
   LABOUR variance, never a full cost variance.
@@ -90,7 +97,9 @@ tools are missing, say so and stop — never invent numbers.
 
 - Complaints total plus recurring service types; Tag Jobs (chargeable work
   outside the contract) current vs previous counts, value and delta
-  (`compare` defaults on).
+  (`compare` defaults on). A "complaint" = a work order under the tenant's
+  complaint work type (name-based configuration — see the
+  `ranyan-work-orders` skill).
 - Headline metric: **`unbilled`** (orders + `quotedNotInvoiced`). Its
   `detail[]` list is a ready-made billing worklist — each entry can be
   closed out with `set_work_order_cost` / `set_work_order_invoice`. A zero
