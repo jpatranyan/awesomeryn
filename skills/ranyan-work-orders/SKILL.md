@@ -99,9 +99,10 @@ automatically by the system** (due-date driven; cannot be set directly).
 
 - The employee at the site reports the work done — the WO sits at
   **inreview**.
-- **Management verifies the result — often by performing an inspection —
-  and only then marks it completed.** This is the practical handshake
-  between the two operation modules.
+- **Management verifies the result and only then marks it completed.**
+  This verification is a separate action from the Inspection module
+  (the supervisor's routine on-site QA) — never conflate the two; see
+  the `ranyan-inspections` skill.
 - Change status with `change_work_order_status` (it triggers the correct
   notifications), never via `update_work_order`. Updates are for field
   edits only — and note `serviceIds` REPLACES the full set when provided;
@@ -122,9 +123,13 @@ rejected by design — it would inflate Tag Billing. In work-order stats,
 Inspection setup (categories/areas/items/types) lives in the app UI — the
 MCP server has no inspection CRUD. Failed items auto-generate remediation
 work orders through the configured inspection/training TYPE's service
-(e.g. one named "Needs Action"). If that work type/service was never
+(e.g. one named "Needs Action"); the generated WO carries the failed
+item's photos and notes, and **inherits the employee when one was
+assigned to the failed item** (item assignment is optional — otherwise
+the WO lands unassigned). If that work type/service was never
 configured, remediation silently produces no work-order trail — which is
 what `noRemediationReason: not-configured` means in inspection stats.
+Details in the `ranyan-inspections` skill.
 
 ## Example flows
 

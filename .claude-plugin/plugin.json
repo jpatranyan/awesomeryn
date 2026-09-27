@@ -1,7 +1,7 @@
 {
   "name": "awesomeryn",
-  "version": "0.4.0",
-  "description": "Knowledge base and onboarding help for the Ranyan web app. Ask /ryn how to do anything, or request job-site stats, project health, work-order, time-log and attestation reports via the Ranyan MCP server.",
+  "version": "0.5.0",
+  "description": "Knowledge base and onboarding help for the Ranyan web app. Ask /ryn how to do anything, or request job-site stats, project health, work-order, inspection, time-log and attestation reports via the Ranyan MCP server.",
   "author": {
     "name": "John Paul Delmundo",
     "email": "jp.delmundo@ranyan.com",
